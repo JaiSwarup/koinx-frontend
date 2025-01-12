@@ -11,8 +11,8 @@ export default function KeyEvent({ src, color }: Props) {
             <div className="rounded-lg w-28 h-28 relative">
                 <Image src={src} alt="" fill className='object-cover' />
             </div>
-            <div className="flex flex-col p-4 leading-normal">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">Calculate your Profits</h5>
+            <div className="flex flex-col p-8 leading-normal">
+                <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white">Calculate your Profits</h5>
                 <button className='bg-white rounded-lg text-black px-3 py-2'>Check Now {"->"}</button>
             </div>
         </div>

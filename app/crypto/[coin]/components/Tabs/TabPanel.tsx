@@ -98,7 +98,7 @@ export default function TabPanel({  }: Props) {
             </div>
             <div className="w-full bg-white rounded-xl p-4 overflow-hidden flex flex-col">
                 
-            <div className='flex-1 p-4 text-black h-full bg-white '>
+            <div className='flex-1 p-4 text-black h-[50rem] bg-white '>
                 <AnimatePresence mode='wait'>
                     <motion.div
                         key={activeTab.name || "empty"}
