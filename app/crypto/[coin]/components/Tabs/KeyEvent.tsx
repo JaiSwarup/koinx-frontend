@@ -3,13 +3,14 @@ import clsx from "clsx";
 type Props = {
     logo: IconType
     color: string
+    hover: string
 };
 
-export default function KeyEvent({ logo: Icon, color }: Props) {
+export default function KeyEvent({ logo: Icon, color, hover }: Props) {
     return (
-        <div className={clsx(`flex items-center border border-gray-200 rounded-lg shadow w-[28rem] transition-colors duration-300 relative shrink-0`, `bg-${color}-200 hover:bg-${color}-400 `)}>
+        <div className={clsx(`flex items-center border border-gray-200 rounded-lg shadow w-[28rem] transition-colors duration-300 relative shrink-0`, `${color}`)}>
             <div className={`pt-4 px-2 h-full`}>
-                <div className={clsx(`flex items-center justify-center p-2 rounded-full w-10 h-10`, `bg-${color}-600`)}>
+                <div className={clsx(`flex items-center justify-center p-2 rounded-full w-10 h-10`, `${hover}`)}>
                     <Icon className="text-xl text-white font-bold" />
                 </div>
             </div>

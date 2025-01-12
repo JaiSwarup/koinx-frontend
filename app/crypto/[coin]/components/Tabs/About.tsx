@@ -26,9 +26,9 @@ export default function About({  }: Props) {
             </p>
             <div className="w-full h-[2px] bg-gray-400 my-2" />
             <h2 className="font-medium text-xl mb-4">Already Holding Bitcoin?</h2>
-            <div className="flex">
-                <AboutCard src="/Frame.png" color="bg-gradient-to-br from-emerald-300 to-blue-900" /> 
-                <AboutCard src="/Frame.png" color="bg-gradient-to-br from-orange-400 to-red-800" /> 
+            <div className="flex gap-2">
+                <AboutCard src="/first.png" color="bg-gradient-to-br from-emerald-300 to-blue-900" title="Calculate your Profits" /> 
+                <AboutCard src="/second.png" color="bg-gradient-to-br from-orange-400 to-red-800" title="Calculate your tax liability" /> 
             </div>
             <div className="w-full h-[2px] bg-gray-400 my-2" />
             <p>
