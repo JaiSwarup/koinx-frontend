@@ -10,7 +10,7 @@ export default function Trending() {
         axios.get("https://api.coingecko.com/api/v3/search/trending")
         .then((res) => {
             setTrending(res.data.coins);
-            console.log(res)
+            // console.log(res)
         })
         .catch((err) => {
             console.log(err);

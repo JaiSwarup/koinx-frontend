@@ -12,7 +12,7 @@ export default function Tokenomics() {
     const renderColorfulLegendText = (value: string, entry: any) => {
         const { payload } = entry;
         const percentage = payload.percentage;
-        console.log(entry)
+        // console.log(entry)
         return <span className="text-gray-600 text-sm font-light">{`${value}: ${percentage}%`}</span>;
       }
       

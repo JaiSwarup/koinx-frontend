@@ -22,11 +22,11 @@ export default function Sentiment() {
                     <h1 className="font-medium text-xl text-gray-500">Analyst Estimates</h1>
                     <Tooltip />
                 </div>
-                <div className='flex gap-4'>
-                    <div className='bg-green-200 flex items-center justify-center p-2 rounded-full w-28 h-28 text-2xl text-green-600 font-bold'>
+                <div className='flex md:gap-4 gap-2 items-center'>
+                    <div className='bg-green-200 flex items-center justify-center p-2 rounded-full w-14 h-14 md:w-28 md:h-28 text-2xl text-green-600 font-bold'>
                         76%
                     </div>
-                    <div className='grid grid-rows-3 grid-cols-[auto,300px,auto] gap-4 items-center'>
+                    <div className='grid grid-rows-3 grid-cols-[auto,100px,auto] md:grid-cols-[auto,300px,auto] gap-4 items-center'>
                         <h1 className='text-2xl font-bold'>Buy</h1>
                         <div className='h-[4px] bg-green-400 w-[76%] rounded-full' />
                         <p>76%</p>

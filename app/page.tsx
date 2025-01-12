@@ -1,9 +1,6 @@
 import Link from 'next/link';
-type Props = {
-    
-};
 
-export default function HomePage({  }: Props) {
+export default function HomePage() {
     return (
         <div className="flex flex-col items-center justify-center h-screen">
             <h1 className="text-4xl font-bold">Welcome to Koinx</h1>

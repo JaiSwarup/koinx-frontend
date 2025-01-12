@@ -75,12 +75,12 @@ export default function TabPanel() {
 
 	return (
         <>
-			<div className="flex my-2 text-gray-700 relative">
+			<div className="flex my-2 text-gray-700 relative overflow-x-auto">
                 <div className='absolute bottom-0 right-0 left-0 rounded-full bg-gray-400 h-[2px] w-full' />
                 {tabs.map((tab) => (
                     <div
                     key={tab.name}
-                    className={clsx(`relative flex items-center`, isSelected(tab) && 'text-blue-500 font-bold')}
+                    className={clsx(`relative flex items-center text-nowrap`, isSelected(tab) && 'text-blue-500 font-bold')}
                     >
                         <button onClick={(e: any) => handleClick(e, tab)} className='flex-1 px-3 py-2' >
                             {tab.label}
@@ -91,7 +91,7 @@ export default function TabPanel() {
             </div>
             <div className="w-full bg-white rounded-xl p-4 overflow-hidden flex flex-col">
                 
-            <div className='flex-1 p-4 text-black h-[50rem] bg-white '>
+            <div className='flex-1 p-2 md:p-4 text-black h-[50rem] bg-white '>
                 <AnimatePresence mode='wait'>
                     <motion.div
                         key={activeTab.name || "empty"}

@@ -1,5 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Pagination() {
     const pathname = usePathname();
@@ -12,22 +13,29 @@ export default function Pagination() {
         "404": "404",
         "crypto": "Cryptocurrencies",
     } 
-    const capitalize= <T extends string>(s: T) => (s[0].toUpperCase() + s.slice(1)) as Capitalize<typeof s>;
-     
+    const capitalize = <T extends string>(s: T) => (s[0].toUpperCase() + s.slice(1)) as Capitalize<typeof s>;
+
     if (pathname === "/") {
-        return 
+        return null;
     }
-    console.log(pathname.split("/")) 
+
+    const paths = pathname.split("/").filter(Boolean);
+
     return (
         <header className="flex self-start gap-2 text-sm text-gray-600 p-4 pt-4">
-            {pathname.split("/").map((path: string, index) => {
-                if (index == 0) {
-                    return
+            {/* <Link href="/">
+                <p className="text-gray-900">Home &raquo;</p>
+            </Link> */}
+            {paths.map((path: string, index) => {
+                const href = "/" + paths.slice(0, index + 1).join("/");
+                if (index === paths.length - 1) {
+                    return <span key={index} className="text-gray-900">{capitalize(path)}</span>;
                 }
-                if (index === pathname.split("/").length - 1) {
-                    return <span key={index} className="text-gray-900">{capitalize(path)}</span>
-                }
-                return <span key={index} className="">{pathVariables[path]} &raquo;</span>
+                return (
+                    <Link key={index} href={href}>
+                        <p className="">{pathVariables[path]} &raquo;</p>
+                    </Link>
+                );
             })}
         </header>
     );

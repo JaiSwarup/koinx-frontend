@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Koinx Frontend
 
-## Getting Started
+## Purpose
+The Koinx Frontend project is designed to provide a user-friendly interface for managing and tracking cryptocurrency investments. It offers various tools and resources to help users understand their crypto taxes, access free tools, and stay updated with the latest trends in the cryptocurrency market.
 
-First, run the development server:
+## Tech Stack
+- **Framework**: Next.js
+- **Programming Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **HTTP Client**: Axios
+- **Icons**: React Icons
+- **Charts**: Recharts
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Available Routes
+- `/`: Home page
+- `/crypto`: Cryptocurrencies overview
+- `/crypto/[coin]`: Detailed page for a specific cryptocurrency \
+**--Not Implemented yet --**
+- `/crypto-taxes`: Information on crypto taxes
+- `/free-tools`: Access to free tools
+- `/resource-center`: Resource center
+- `/get-started`: Getting started guide
+- `/404`: Custom 404 page
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation Instructions
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/JaiSwarup/koinx-frontend.git
+   cd koinx-frontend
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
 
-## Learn More
+4. **Build the project for production:**
+   ```sh
+   npm run build
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+5. **Start the production server:**
+   ```sh
+   npm start
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. **Lint the code:**
+   ```sh
+   npm run lint
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.

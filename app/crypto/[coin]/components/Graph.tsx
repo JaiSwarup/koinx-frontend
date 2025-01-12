@@ -1,7 +1,6 @@
 "use client"
 import React, {useEffect, useRef, memo, useState} from 'react'
 import Image from 'next/image';
-import clsx from 'clsx';
 import axios from 'axios';
 type Props = {
     coin: string
@@ -52,7 +51,7 @@ function TradingViewWidget({ coin }: Props) {
         // }
     })
     .then((res) => {
-    console.log(res)
+    // console.log(res)
       setData(res.data);
     })
     .catch((err) => {
@@ -61,10 +60,24 @@ function TradingViewWidget({ coin }: Props) {
   }, [coin]);
 
   return (
-    <div className='h-[calc(100vh-96px)] bg-white rounded-xl p-4 flex flex-col gap-4 overflow-hidden'>
+    <>
+    {data.image && (
+      <div className='flex md:hidden items-center gap-4'>
+        <div className='w-8 h-8 relative'>
+          <Image src={data.image.large} alt={`${data.name} logo`} fill />
+        </div>
+        <h1 className='text-3xl flex items-center gap-4'>
+          {data.name} <span className='text-gray-500 text-sm'>{data.symbol.toUpperCase()}</span>
+        </h1>
+        <p className='bg-gray-600 rounded-md px-2 py-1 text-white text-sm'>
+          Rank #{data.market_cap_rank}
+        </p>
+      </div>
+    )}
+    <div className='h-[calc(100vh-96px)] bg-white rounded-xl max-w-full p-4 flex flex-col gap-4 overflow-hidden'>
       {data.image ? (
         <>
-          <div className='flex items-center gap-4'>
+          <div className='md:flex items-center gap-4 hidden'>
             <div className='w-8 h-8 relative'>
               <Image src={data.image.large} alt={`${data.name} logo`} fill />
             </div>
@@ -105,6 +118,7 @@ function TradingViewWidget({ coin }: Props) {
         ></div>
       </div>
     </div>
+    </>
   );
 }  
 
