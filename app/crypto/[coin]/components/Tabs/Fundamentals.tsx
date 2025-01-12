@@ -1,8 +1,5 @@
 import Tooltip from "../Tooltip";
-
-type Props = {};
-
-export default function Fundamentals({}: Props) {
+export default function Fundamentals() {
 
     return (
         <div>

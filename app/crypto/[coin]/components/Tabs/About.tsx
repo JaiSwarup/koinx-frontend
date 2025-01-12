@@ -1,10 +1,6 @@
 import AboutCard from "./AboutCard";
 
-type Props = {
-    
-};
-
-export default function About({  }: Props) {
+export default function About() {
 
     return (
         <div>

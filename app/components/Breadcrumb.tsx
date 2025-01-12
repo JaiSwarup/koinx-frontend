@@ -1,11 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
-type Props = {
-    
-};
 
-
-export default function Pagination({  }: Props) {
+export default function Pagination() {
     const pathname = usePathname();
     const pathVariables: { [key: string]: string } = {
         "" : "Home",

@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { FaRegClock } from 'react-icons/fa';
-type Props = {
-    
-};
 
-export default function NewsCard({  }: Props) {
+export default function NewsCard() {
     return (
         <div className="flex items-center bg-white border border-gray-200 rounded-lg shadow w-[36rem] hover:bg-gray-100 relative shrink-0">
                 <div className="relative w-1/2 h-full">

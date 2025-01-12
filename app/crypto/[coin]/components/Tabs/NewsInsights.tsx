@@ -1,11 +1,7 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
 import NewsCard from './NewsCard';
 import SimpleCarousel from '../SimpleCarousel';
 
-type Props = {};
-
-export default function NewsInsights({}: Props) {
+export default function NewsInsights() {
 
     return (
         <div className="overflow-hidden relative">

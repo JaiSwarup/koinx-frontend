@@ -1,11 +1,7 @@
 
 import { FaInfoCircle } from 'react-icons/fa';
 import { useState } from 'react';
-type Props = {
-    
-};
-
-export default function Tooltip({  }: Props) {
+export default function Tooltip() {
     const [tooltipVisible, setTooltipVisible] = useState(false);
     return (
         <>

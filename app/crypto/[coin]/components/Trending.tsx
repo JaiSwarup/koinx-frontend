@@ -1,12 +1,10 @@
 "use client"
 import axios from 'axios';
 import clsx from 'clsx';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
-type Props = {
-    
-};
 
-export default function Trending({  }: Props) {
+export default function Trending() {
     const [trending, setTrending] = useState<any[]>([]);
     useEffect(() => {
         axios.get("https://api.coingecko.com/api/v3/search/trending")
@@ -24,8 +22,8 @@ export default function Trending({  }: Props) {
             <div className="flex flex-col gap-4">
                 {trending.slice(0, 3).map((coin, i) => (
                     <div key={i} className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-gray-200 shrink-0 overflow-hidden">
-                            <img src={coin.item.large} alt="" className="object-cover" />
+                        <div className="w-12 h-12 rounded-full bg-gray-200 shrink-0 overflow-hidden relative">
+                            <Image src={coin.item.large} alt={coin.item.name} fill className="object-cover" />
                         </div>
                         <div key={i} className="flex items-center gap-4 justify-between w-full">
                             <div className="flex flex-col">

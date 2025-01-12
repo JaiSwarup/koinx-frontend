@@ -1,16 +1,10 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
 import KeyEvent from './KeyEvent';
 import { IoNewspaper } from "react-icons/io5";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import Tooltip from '../Tooltip';
 import SimpleCarousel from '../SimpleCarousel';
 
-type Props = {
-    
-};
-
-export default function Sentiment({  }: Props) {    
+export default function Sentiment() {    
     return (
         <div className="">
             <h1 className="font-medium text-3xl mb-4">Sentiment</h1>

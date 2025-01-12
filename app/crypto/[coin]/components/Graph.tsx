@@ -9,7 +9,7 @@ type Props = {
 
 function TradingViewWidget({ coin }: Props) {
   const container = useRef<HTMLDivElement>(null);
-  const [duration, setDuration] = useState("D");
+//   const [duration, setDuration] = useState("D");
   const [data, setData] = useState<any>({usd: 0, inr: 0, usd_24h_change: 0});
 
   useEffect(
@@ -37,9 +37,9 @@ function TradingViewWidget({ coin }: Props) {
               "support_host": "https://www.tradingview.com"
             }`;
         container.current.appendChild(script);
-        return () => {
-            container.current?.removeChild(script);
-        }
+        // return () => {
+        //     container.current?.removeChild(script);
+        // }
         },
     []
   );

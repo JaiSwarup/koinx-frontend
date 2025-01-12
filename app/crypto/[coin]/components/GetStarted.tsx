@@ -1,9 +1,6 @@
 import Image from "next/image";
-type Props = {
-    
-};
 
-export default function GetStarted({  }: Props) {
+export default function GetStarted() {
     return (
         <div className="py-8 px-8 w-full flex flex-col  bg-blue-600 rounded-xl items-center text-center gap-4 text-white">
             <h1 className="text-2xl font-semibold">Get Started with KoinX for free</h1>

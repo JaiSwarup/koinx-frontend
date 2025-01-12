@@ -1,10 +1,6 @@
 import TeamCard from "./TeamCard";
 
-type Props = {
-    
-};
-
-export default function Team({  }: Props) {
+export default function Team() {
     return (
         <div>
             <h1 className="font-medium text-3xl mb-4">Tokenomics</h1>

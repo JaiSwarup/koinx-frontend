@@ -1,13 +1,9 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import LikeCard from './LikeCard';
-import { motion } from 'motion/react';
 import SimpleCarousel from './SimpleCarousel';
-type Props = {
-    
-};
 
-export default function YouMay({  }: Props) {
+export default function YouMay() {
     const [trending, setTrending] = useState<any[]>([]);
 
     useEffect(() => {

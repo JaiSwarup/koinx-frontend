@@ -1,10 +1,6 @@
 import { PieChart, Pie, Tooltip, Legend } from "recharts";
 
-type Props = {
-    
-};
-
-export default function Tokenomics({  }: Props) {
+export default function Tokenomics() {
     const data = [
         {
             name: 'Foundation', percentage : 20, fill: '#FAA002'

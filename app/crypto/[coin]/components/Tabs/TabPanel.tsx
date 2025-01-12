@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, Variants, motion } from 'framer-motion'
 import clsx from 'clsx';
-import Link from 'next/link';
 import Overview from './Overview';
 import Fundamentals from './Fundamentals';
 import NewsInsights from './NewsInsights';
@@ -9,12 +8,6 @@ import Sentiment from './Sentiment';
 import About from './About';
 import Tokenomics from './Tokenomics';
 import Team from './Team';
-type Props = {
-    // children?: React.ReactNode;
-    // index: any;
-    // value: any;
-};
-
 const tabs = [
 	{
 		name: 'tab1',
@@ -68,7 +61,7 @@ const tabContentVariants: Variants = {
 	}
 }
 
-export default function TabPanel({  }: Props) {
+export default function TabPanel() {
  
     const [activeTab, setActiveTab] = useState<any>(tabs[0])
 
