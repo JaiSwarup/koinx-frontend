@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link href="#" className="" >Crypto Taxes</Link>
                 <Link href="#" className="" >Free Tools</Link>
                 <Link href="#" className="" >Resource Center</Link>
-                <Link href="#" className="ml-4" >Get Started</Link>
+                <Link href="#" className="ml-4 bg-blue-600 rounded-lg text-white border px-4 py-2" >Get Started</Link>
             </div>
             <div className="flex md:hidden">
                 <BiMenu className="h-6 w-6" />
