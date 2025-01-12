@@ -49,6 +49,10 @@ export default function Graph({ coin }: Props) {
           "hide_volume": true,
           "support_host": "https://www.tradingview.com"
         }`;
+        if (container.current.firstChild) {
+          container.current.firstChild.remove();
+        }
+        console.log(container)
         container.current.appendChild(script);
       },
       [duration]
