@@ -9,7 +9,7 @@ export default function KeyEvent({ logo: Icon, color }: Props) {
     return (
         <div className={clsx(`flex items-center border border-gray-200 rounded-lg shadow w-[28rem] transition-colors duration-300 relative shrink-0`, `bg-${color}-200 hover:bg-${color}-400 `)}>
             <div className={`pt-4 px-2 h-full`}>
-                <div className={`bg-${color}-600 flex items-center justify-center p-2 rounded-full w-10 h-10`}>
+                <div className={clsx(`flex items-center justify-center p-2 rounded-full w-10 h-10`, `bg-${color}-600`)}>
                     <Icon className="text-xl text-white font-bold" />
                 </div>
             </div>
