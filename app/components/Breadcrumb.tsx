@@ -13,9 +13,13 @@ export default function Pagination() {
         "crypto": "Cryptocurrencies",
     } 
     const capitalize= <T extends string>(s: T) => (s[0].toUpperCase() + s.slice(1)) as Capitalize<typeof s>;
-    // console.log(pathname.split("/"))
+     
+    if (pathname === "/") {
+        return 
+    }
+    console.log(pathname.split("/")) 
     return (
-        <header className="flex self-start gap-2 text-sm text-gray-600 p-4 pt-0">
+        <header className="flex self-start gap-2 text-sm text-gray-600 p-4 pt-4">
             {pathname.split("/").map((path: string, index) => {
                 if (index == 0) {
                     return

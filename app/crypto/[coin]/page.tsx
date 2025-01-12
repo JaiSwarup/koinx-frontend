@@ -13,17 +13,19 @@ export default function Home() {
   // console.log(coin)
   return (
     <div className="h-full flex flex-col gap-8">
-      <div className="mx-auto grid grid-cols-3 gap-8 px-8">
-        <div className="col-span-2 flex flex-col gap-4">
+      <div className="mx-auto grid grid-cols-3 gap-8">
+        <div className="col-span-2 flex flex-col gap-4 pl-8">
           <Graph coin={coin} />
           <TabPanel />
         </div>
-        <div className="col-span-1 flex flex-col gap-4">
+        <div className="col-span-1 flex flex-col gap-4 pr-8">
           <GetStarted />
           <Trending />
         </div>
+        <div className="col-span-3">
+          <YouMay />
+        </div>
       </div>
-      <YouMay />
     </div>
   );
 }
